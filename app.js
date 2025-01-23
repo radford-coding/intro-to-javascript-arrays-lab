@@ -155,8 +155,7 @@ Hint: Initialize the `odds` variable to an empty array before the iteration.
 Complete Exercise 11 in the space below:
 */
 
-const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
-const odds = [];
+const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90], odds = [];
 for (let num of nums) {
    if (num % 2 === 1) {
       // not sorted but I assume that's intended
@@ -186,13 +185,13 @@ Complete Exercise 12 in the space below:
 */
 let fizz = [], buzz = [], fizzbuzz = [];
 nums.forEach((num) => {
-   if (num % 3 === 0) {
+   if (num % 3 === 0) { // evenly dividible by 3
       fizz.push(num);
    };
-   if (num % 5 === 0) {
+   if (num % 5 === 0) { // evenly dividible by 5
       buzz.push(num);
    };
-   if (num % (3 * 5) === 0) {
+   if (num % (3 * 5) === 0) { // evenly dividible by both 3 and 5
       fizzbuzz.push(num);
    };
 });
@@ -255,8 +254,8 @@ Complete Exercise 15 in the space below:
 
 let total = 0;
 for (let array of numArrays) {
-   for (let num of array) {
-      total += num;
+   for (let x of array) { // was tempted to use num as the variable name again here, which works within this scope, but decided against reusing variable names
+      total += x;
    };
 };
 
